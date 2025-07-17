@@ -1,52 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Star, Users, Award } from "lucide-react";
+import { Users, Heart, Gift, Check } from "lucide-react";
 
-const membershipTiers = [
+const membershipTypes = [
   {
-    name: "Basis",
-    price: "500",
-    period: "måned",
+    name: "Voksne",
+    price: "300",
     icon: Users,
-    description: "Perfekt for nybegynnere",
-    features: [
-      "Tilgang til bassengtrening",
-      "Grunnleggende kurs",
-      "Sosiale arrangementer",
-      "Utlån av grunnleggende utstyr"
-    ],
-    popular: false
+    description: "For personer over 18 år"
   },
   {
-    name: "Aktiv",
-    price: "800",
-    period: "måned",
-    icon: Star,
-    description: "For dedikerte frikykkere",
-    features: [
-      "Alt fra Basis",
-      "Åpenhavstrening",
-      "Avanserte kurs",
-      "Prioritet på arrangementer",
-      "Utlån av avansert utstyr"
-    ],
-    popular: true
+    name: "Barn/Unge",
+    price: "150",
+    icon: Heart,
+    description: "For barn og ungdom under 18 år"
   },
   {
-    name: "Elite",
-    price: "1200",
-    period: "måned",
-    icon: Award,
-    description: "For seriøse utøvere",
-    features: [
-      "Alt fra Aktiv",
-      "Personlig veiledning",
-      "Konkurranseforberedelse",
-      "Ubegrenset utlån",
-      "Eksklusive arrangementer"
-    ],
-    popular: false
+    name: "Familie",
+    price: "600",
+    icon: Gift,
+    description: "Familiemedlemskap for hele familien"
   }
+];
+
+const membershipBenefits = [
+  "Åpen klubb for alle, både barn og voksne",
+  "Inkluderende miljø basert på aktiviteter som fremmer gode opplevelser",
+  "Mindre fokus på prestasjoner, mer på fellesskap",
+  "Langture og turer i lokalmiljøet",
+  "Arrangementer som foredrag, åpen dag, bassengtrening og kurs",
+  "Utlån av utstyr til medlemspriser",
+  "15% rabatt på alt i butikken hos Sola Sport og Fritid (10% på fridykkeutstyr)",
+  "50% rabatt på båtførerprøven",
+  "Automatisk medlemskap i Norges Dykkeforbund og Norges Idrettsforbund",
+  "Gratis barneidrettsforsikring gjennom NIF",
+  "Idrettsbil fra Hertz til medlemspriser",
+  "Idrettspriser hos SAS og Nordic Choice"
 ];
 
 export function MembershipSection() {
@@ -58,70 +47,89 @@ export function MembershipSection() {
             Bli medlem
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Velg medlemskap som passer deg. Alle medlemskap inkluderer tilgang til 
-            vårt fantastiske miljø og profesjonelle veiledning.
+            Sola Fridykkeklubb er medlem av Norges idrettsforbund (NIF) og Norges Dykkeforbund.
+          </p>
+          <p className="text-lg text-muted-foreground mt-4">
+            Du kan enkelt bli medlem i klubben via vår innmeldingsside hos NIF.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {membershipTiers.map((tier, index) => (
+        {/* Membership Pricing */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {membershipTypes.map((type, index) => (
             <Card 
-              key={tier.name}
-              className={`relative group transition-all duration-300 hover:shadow-float hover:-translate-y-2 animate-fade-in-up ${
-                tier.popular ? 'border-primary shadow-depth' : 'hover:border-primary/50'
-              }`}
+              key={type.name}
+              className="relative group transition-all duration-300 hover:shadow-float hover:-translate-y-2 animate-fade-in-up hover:border-primary/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {tier.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                    Mest populær
-                  </div>
-                </div>
-              )}
-              
               <CardHeader className="text-center pb-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tier.icon className="w-6 h-6 text-primary" />
+                  <type.icon className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-foreground">{tier.name}</CardTitle>
-                <p className="text-muted-foreground">{tier.description}</p>
+                <CardTitle className="text-2xl font-bold text-foreground">{type.name}</CardTitle>
+                <p className="text-muted-foreground">{type.description}</p>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-primary">{tier.price}</span>
-                  <span className="text-muted-foreground">kr/{tier.period}</span>
+                  <span className="text-4xl font-bold text-primary">{type.price}</span>
+                  <span className="text-muted-foreground"> kr</span>
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="pt-4">
-                  <Button 
-                    variant={tier.popular ? "ocean" : "wave"} 
-                    size="lg" 
-                    className="w-full"
-                  >
-                    Meld deg inn
-                  </Button>
-                </div>
+              <CardContent className="pt-4">
+                <Button 
+                  variant="wave"
+                  size="lg" 
+                  className="w-full"
+                >
+                  Meld deg inn
+                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-muted-foreground mb-6">
-            Har du spørsmål om medlemskap? Vi hjelper deg gjerne!
-          </p>
-          <Button variant="outline" size="lg">
-            Kontakt oss
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+            Fordeler ved medlemskapet
+          </h3>
+          <Card className="bg-card border-primary/20">
+            <CardContent className="p-8">
+              <p className="text-foreground mb-6 text-lg leading-relaxed">
+                Vi er en klubb som er åpen for alle, både barn og voksne. Vi har et inkluderende miljø basert på aktiviteter som fremmer gode opplevelser og har mindre fokus på prestasjoner. Vi arrangerer langture og turer i lokalmiljøet, har arrangementer som foredrag, åpen dag, bassengtrening og kurs.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-4">Medlemsfordeler</h4>
+                  <ul className="space-y-3">
+                    {membershipBenefits.slice(0, 6).map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-4">Automatiske fordeler</h4>
+                  <ul className="space-y-3">
+                    {membershipBenefits.slice(6).map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center">
+          <Button variant="ocean" size="lg">
+            Meld deg inn via NIF
           </Button>
         </div>
       </div>
