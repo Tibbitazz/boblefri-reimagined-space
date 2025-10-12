@@ -37,6 +37,9 @@ export function Navigation() {
                   {item.name}
                 </a>
               ))}
+              <Button asChild variant="outline" size="sm">
+                <a href="/auth">Admin</a>
+              </Button>
             </div>
           </div>
 

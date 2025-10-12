@@ -1,50 +1,57 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-// Placeholder images - in a real app, these would come from a CMS or API
-const galleryImages = [
+interface GalleryImage {
+  id: string;
+  title: string;
+  description: string | null;
+  image_url: string;
+}
+
+const placeholderImages: GalleryImage[] = [
   {
-    id: 1,
+    id: "1",
     title: "Dykking i dypet",
     description: "Fridykking i krystalklart vann",
-    url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
+    image_url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
   },
   {
-    id: 2,
+    id: "2",
     title: "Undervannsliv",
     description: "Vakker marin fauna",
-    url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
+    image_url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
   },
   {
-    id: 3,
+    id: "3",
     title: "Solnedgang dykk",
     description: "Magisk atmosfære ved solnedgang",
-    url: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop"
+    image_url: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop"
   },
-  {
-    id: 4,
-    title: "Gruppedykk",
-    description: "Medlemmer på tur sammen",
-    url: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop"
-  },
-  {
-    id: 5,
-    title: "Teknisk dykking",
-    description: "Avanserte teknikker",
-    url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop"
-  },
-  {
-    id: 6,
-    title: "Ryddeaksjon",
-    description: "Miljøvern i aksjon",
-    url: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=600&fit=crop"
-  }
 ];
 
 export function GallerySection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>(placeholderImages);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadGalleryImages();
+  }, []);
+
+  const loadGalleryImages = async () => {
+    const { data } = await supabase
+      .from("gallery_images")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (data && data.length > 0) {
+      setGalleryImages(data);
+    }
+    setLoading(false);
+  };
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -72,7 +79,7 @@ export function GallerySection() {
           <Card className="overflow-hidden shadow-depth">
             <div className="relative h-96 md:h-[500px]">
               <img 
-                src={galleryImages[currentImageIndex].url}
+                src={galleryImages[currentImageIndex].image_url}
                 alt={galleryImages[currentImageIndex].title}
                 className="w-full h-full object-cover"
               />
@@ -120,7 +127,7 @@ export function GallerySection() {
             >
               <div className="relative h-24 md:h-32 overflow-hidden">
                 <img 
-                  src={image.url}
+                  src={image.image_url}
                   alt={image.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
