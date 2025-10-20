@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 
 const contactInfo = [
@@ -42,7 +39,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="grid sm:grid-cols-2 gap-6">
@@ -95,48 +92,6 @@ export function ContactSection() {
               </div>
             </Card>
           </div>
-
-          {/* Contact Form */}
-          <Card className="shadow-depth">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Send oss en melding</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="firstName" className="text-foreground">Fornavn</Label>
-                  <Input id="firstName" placeholder="Ditt fornavn" />
-                </div>
-                <div>
-                  <Label htmlFor="lastName" className="text-foreground">Etternavn</Label>
-                  <Input id="lastName" placeholder="Ditt etternavn" />
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="email" className="text-foreground">E-post</Label>
-                <Input id="email" type="email" placeholder="din@epost.no" />
-              </div>
-              
-              <div>
-                <Label htmlFor="phone" className="text-foreground">Telefon</Label>
-                <Input id="phone" type="tel" placeholder="+47 123 45 678" />
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="text-foreground">Melding</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Hva lurer du på?"
-                  className="min-h-32"
-                />
-              </div>
-              
-              <Button variant="ocean" size="lg" className="w-full">
-                Send melding
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

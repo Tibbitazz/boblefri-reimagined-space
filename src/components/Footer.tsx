@@ -1,4 +1,5 @@
 import { Waves, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
@@ -37,13 +38,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#cleanup" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Ryddeaksjoner
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Bilder
+                <a href="/barnas-havfest" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Barnas Havfest
                 </a>
               </li>
               <li>
@@ -69,13 +65,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-primary-foreground/80 flex items-center justify-center gap-2">
-            Laget med <Heart className="w-4 h-4 text-accent" /> for havet og fridykking
-          </p>
-          <p className="text-primary-foreground/60 mt-2">
-            © {new Date().getFullYear()} Sola Fridykkeklubb. Alle rettigheter forbeholdt.
-          </p>
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-primary-foreground/80 flex items-center justify-center gap-2">
+              Laget med <Heart className="w-4 h-4 text-accent" /> for havet og fridykking
+            </p>
+            <Button asChild variant="ghost" size="sm" className="text-primary-foreground/60 hover:text-primary-foreground/80">
+              <a href="/auth">Admin</a>
+            </Button>
+            <p className="text-primary-foreground/60">
+              © {new Date().getFullYear()} Sola Fridykkeklubb. Alle rettigheter forbeholdt.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

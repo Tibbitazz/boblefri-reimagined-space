@@ -54,37 +54,37 @@ export function MembershipSection() {
           </p>
         </div>
 
-        {/* Membership Pricing */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {membershipTypes.map((type, index) => (
-            <Card 
-              key={type.name}
-              className="relative group transition-all duration-300 hover:shadow-float hover:-translate-y-2 animate-fade-in-up hover:border-primary/50"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <type.icon className="w-6 h-6 text-primary" />
-                </div>
-                <CardTitle className="text-2xl font-bold text-foreground">{type.name}</CardTitle>
-                <p className="text-muted-foreground">{type.description}</p>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-primary">{type.price}</span>
-                  <span className="text-muted-foreground"> kr</span>
-                </div>
-              </CardHeader>
+        {/* Membership Call to Action */}
+        <div className="mb-16">
+          <Card 
+            className="relative group transition-all duration-300 hover:shadow-float hover:-translate-y-2 border-primary/50 cursor-pointer max-w-2xl mx-auto"
+            onClick={() => window.open('https://www.nif.no', '_blank')}
+          >
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <CardTitle className="text-3xl font-bold text-foreground mb-4">Bli medlem i dag</CardTitle>
+              <p className="text-muted-foreground text-lg">
+                Medlemskap inkluderer alle aktiviteter og fordeler
+              </p>
+              <div className="mt-6 space-y-2">
+                <p className="text-foreground"><span className="font-semibold">Voksne:</span> 300 kr</p>
+                <p className="text-foreground"><span className="font-semibold">Barn/Unge (under 18):</span> 150 kr</p>
+                <p className="text-foreground"><span className="font-semibold">Familie:</span> 600 kr</p>
+              </div>
+            </CardHeader>
 
-              <CardContent className="pt-4">
-                <Button 
-                  variant="wave"
-                  size="lg" 
-                  className="w-full"
-                >
-                  Meld deg inn
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+            <CardContent className="pt-4">
+              <Button 
+                variant="wave"
+                size="lg" 
+                className="w-full"
+              >
+                Meld deg inn via NIF
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Benefits Section */}
@@ -127,11 +127,6 @@ export function MembershipSection() {
           </Card>
         </div>
 
-        <div className="text-center">
-          <Button variant="ocean" size="lg">
-            Meld deg inn via NIF
-          </Button>
-        </div>
       </div>
     </section>
   );

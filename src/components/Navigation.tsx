@@ -7,8 +7,7 @@ const navigationItems = [
   { name: "Om oss", href: "#about" },
   { name: "Bli medlem", href: "#membership" },
   { name: "Låneutstyr", href: "#equipment" },
-  { name: "Ryddeaksjoner", href: "#cleanup" },
-  { name: "Bilder", href: "#gallery" },
+  { name: "Barnas Havfest", href: "/barnas-havfest" },
   { name: "Kontakt", href: "#contact" },
 ];
 
@@ -37,9 +36,6 @@ export function Navigation() {
                   {item.name}
                 </a>
               ))}
-              <Button asChild variant="outline" size="sm">
-                <a href="/auth">Admin</a>
-              </Button>
             </div>
           </div>
 

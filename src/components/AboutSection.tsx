@@ -1,26 +1,25 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Waves, Users, Heart, Shield } from "lucide-react";
+import { Waves } from "lucide-react";
 
-const features = [
+const activities = [
   {
-    icon: Waves,
-    title: "Fridykking",
-    description: "Lær den eldste formen for dykking - helt uten utstyr, bare deg og havet."
+    title: "Bassengtrening",
+    description: "Utvikle teknikk og pusteøvelser i kontrollerte omgivelser. Perfekt for å bygge grunnleggende ferdigheter og utholdenhet."
   },
   {
-    icon: Users,
-    title: "Fellesskap",
-    description: "Bli del av et varmt og støttende miljø hvor sikkerhet og kameratskap står i fokus."
+    title: "Dybde",
+    description: "Utforsk dypere farvann og test dine grenser med erfarne instruktører. Lær riktig teknikk for dybdedykking."
   },
   {
-    icon: Heart,
-    title: "Miljøvern",
-    description: "Vi bryr oss om havet og jobber aktivt for å holde det rent gjennom ryddeaksjoner."
+    title: "Ryddeaksjoner",
+    description: "Bidra til et renere hav ved å delta på våre ryddeaksjoner. Fellesskap og miljøvern i praksis."
   },
   {
-    icon: Shield,
-    title: "Sikkerhet",
-    description: "Erfarne instruktører sørger for at du lærer fridykking på en trygg måte."
+    title: "Sosialt",
+    description: "Bli kjent med andre fridykkere gjennom sosiale arrangementer, langture og kameratlige sammenkomster."
+  },
+  {
+    title: "Undervannsjakt",
+    description: "Lær bærekraftig undervannsjakt med respekt for havet. Erfarne jegere deler sin kunnskap og erfaring."
   }
 ];
 
@@ -39,23 +38,21 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <Card 
-              key={feature.title}
-              className="group hover:shadow-float transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          {activities.map((activity, index) => (
+            <div 
+              key={activity.title}
+              className="text-center animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-6 text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
+              <div className="mb-4">
+                <div className="w-full aspect-square bg-gradient-ocean rounded-xl flex items-center justify-center mb-4 hover:scale-105 transition-transform">
+                  <Waves className="w-12 h-12 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </CardContent>
-            </Card>
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{activity.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{activity.description}</p>
+            </div>
           ))}
         </div>
 
