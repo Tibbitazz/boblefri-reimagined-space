@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Waves } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoLight from "@/assets/logo-light.jpg";
 
 const navigationItems = [
   { name: "Om oss", href: "#about" },
@@ -19,10 +20,9 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <Waves className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold text-primary">Sola Fridykkeklubb</span>
-          </div>
+          <a href="/" className="flex items-center gap-3">
+            <img src={logoLight} alt="Sola Fridykkeklubb" className="h-12 w-auto" />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">

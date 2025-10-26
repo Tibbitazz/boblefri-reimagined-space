@@ -1,5 +1,6 @@
-import { Waves, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoLight from "@/assets/logo-light.jpg";
 
 export function Footer() {
   return (
@@ -8,9 +9,8 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Waves className="w-8 h-8" />
-              <span className="text-xl font-bold">Sola Fridykkeklubb</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logoLight} alt="Sola Fridykkeklubb" className="h-16 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Norges fremste fridykkeklubb. Vi tilbyr trygg og profesjonell 
