@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoLight from "@/assets/logo-light.jpg";
+import logoWhite from "@/assets/logo-white.svg";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Logo and description */}
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoLight} alt="Sola Fridykkeklubb" className="h-16 w-auto" />
+              <img src={logoWhite} alt="Sola Fridykkeklubb" className="h-12 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Norges fremste fridykkeklubb. Vi tilbyr trygg og profesjonell 
