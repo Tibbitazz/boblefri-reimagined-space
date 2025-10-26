@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ocean: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-depth hover:shadow-float hover:scale-105 font-semibold",
-        wave: "bg-accent/20 text-primary border-2 border-accent hover:bg-accent hover:text-primary shadow-surface hover:shadow-float hover:scale-105 font-semibold",
+        wave: "bg-accent text-primary-foreground border-2 border-primary-foreground/30 hover:bg-accent/80 hover:border-primary-foreground shadow-surface hover:shadow-float hover:scale-105 font-semibold",
       },
       size: {
         default: "h-11 px-6 py-3",

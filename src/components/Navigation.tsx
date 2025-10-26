@@ -21,7 +21,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
-            <img src={logoBlue} alt="Sola Fridykkeklubb" className="h-10 w-auto" />
+            <img src={logoBlue} alt="Sola Fridykkeklubb" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
