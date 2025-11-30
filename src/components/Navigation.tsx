@@ -5,11 +5,12 @@ import { cn } from "@/lib/utils";
 import logoBlue from "@/assets/logo-blue.svg";
 
 const navigationItems = [
-  { name: "Om oss", href: "#about" },
-  { name: "Bli medlem", href: "#membership" },
-  { name: "Låneutstyr", href: "#equipment" },
+  { name: "Om oss", href: "/om-oss" },
+  { name: "Bli medlem", href: "/bli-medlem" },
+  { name: "Låneutstyr", href: "/laneutstyr" },
   { name: "Barnas Havfest", href: "/barnas-havfest" },
-  { name: "Kontakt", href: "#contact" },
+  { name: "Dokumentarkiv", href: "/dokumentarkiv" },
+  { name: "Kontakt", href: "/kontakt" },
 ];
 
 export function Navigation() {
