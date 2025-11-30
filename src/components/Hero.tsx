@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Waves, Fish } from "lucide-react";
+import logoWhite from "@/assets/logo-white.svg";
 
 export function Hero() {
   return (
@@ -26,23 +27,26 @@ export function Hero() {
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6">
-            SOLA
-          </h1>
-          <p className="text-2xl md:text-3xl text-primary-foreground/90 mb-4 font-light">
-            FRIDYKKEKLUBB
-          </p>
+          <div className="flex justify-center mb-8">
+            <img 
+              src={logoWhite} 
+              alt="Sola Fridykkeklubb" 
+              className="h-48 md:h-64 w-auto"
+            />
+          </div>
           <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-12 leading-relaxed">
             Opplev det stille havet. Utforsk dybden. Bli med oss på reisen under overflaten.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="ocean" size="lg" className="animate-scale-in">
+          <div className="flex justify-center">
+            <Button 
+              variant="ocean" 
+              size="lg" 
+              className="animate-scale-in"
+              onClick={() => window.location.href = '/bli-medlem'}
+            >
               Bli medlem
-            </Button>
-            <Button variant="wave" size="lg" className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              Lær mer
             </Button>
           </div>
         </div>
