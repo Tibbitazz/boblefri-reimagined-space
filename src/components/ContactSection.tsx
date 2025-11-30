@@ -6,7 +6,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    details: "Sola Badeplass, 4050 Sola"
+    details: "Soltunvegen 8, 4050 Sola"
   },
   {
     icon: Phone,
@@ -81,15 +81,24 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Map placeholder */}
-            <Card className="shadow-depth">
-              <div className="h-64 bg-gradient-ocean rounded-lg flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <MapPin className="w-12 h-12 mx-auto mb-2" />
-                  <p className="text-lg font-medium">Sola Badeplass</p>
-                  <p className="opacity-80">4050 Sola</p>
-                </div>
-              </div>
+            {/* Map */}
+            <Card className="shadow-depth overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-foreground">Finn oss her</CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2061.982791389842!2d5.626936876866867!3d58.88032897726789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a343d61ed0001%3A0x7e8d45e9c1b1c1b1!2sSoltunvegen%208%2C%204050%20Sola!5e0!3m2!1sen!2sno!4v1234567890123!5m2!1sen!2sno"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sola Fridykkeklubb Location"
+                  className="w-full"
+                />
+              </CardContent>
             </Card>
           </div>
         </div>
