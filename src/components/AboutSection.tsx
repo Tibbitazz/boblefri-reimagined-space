@@ -1,25 +1,35 @@
-import { Waves } from "lucide-react";
+import bassengtrening from "@/assets/bassengtrening.png";
+import dybde from "@/assets/dybde.png";
+import ryddeaksjoner from "@/assets/ryddeaksjoner.png";
+import sosialt from "@/assets/sosialt.png";
+import undervannsjakt from "@/assets/undervannsjakt.png";
+import varHistorie from "@/assets/var-historie.png";
 
 const activities = [
   {
     title: "Bassengtrening",
-    description: "Utvikle teknikk og pusteøvelser i kontrollerte omgivelser. Perfekt for å bygge grunnleggende ferdigheter og utholdenhet."
+    description: "Utvikle teknikk og pusteøvelser i kontrollerte omgivelser. Perfekt for å bygge grunnleggende ferdigheter og utholdenhet.",
+    image: bassengtrening
   },
   {
     title: "Dybde",
-    description: "Utforsk dypere farvann og test dine grenser med erfarne instruktører. Lær riktig teknikk for dybdedykking."
+    description: "Utforsk dypere farvann og test dine grenser med erfarne instruktører. Lær riktig teknikk for dybdedykking.",
+    image: dybde
   },
   {
     title: "Ryddeaksjoner",
-    description: "Bidra til et renere hav ved å delta på våre ryddeaksjoner. Fellesskap og miljøvern i praksis."
+    description: "Bidra til et renere hav ved å delta på våre ryddeaksjoner. Fellesskap og miljøvern i praksis.",
+    image: ryddeaksjoner
   },
   {
     title: "Sosialt",
-    description: "Bli kjent med andre fridykkere gjennom sosiale arrangementer, langture og kameratlige sammenkomster."
+    description: "Bli kjent med andre fridykkere gjennom sosiale arrangementer, langture og kameratlige sammenkomster.",
+    image: sosialt
   },
   {
     title: "Undervannsjakt",
-    description: "Lær bærekraftig undervannsjakt med respekt for havet. Erfarne jegere deler sin kunnskap og erfaring."
+    description: "Lær bærekraftig undervannsjakt med respekt for havet. Erfarne jegere deler sin kunnskap og erfaring.",
+    image: undervannsjakt
   }
 ];
 
@@ -46,8 +56,12 @@ export function AboutSection() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4">
-                <div className="w-full aspect-square bg-gradient-ocean rounded-xl flex items-center justify-center mb-4 hover:scale-105 transition-transform">
-                  <Waves className="w-12 h-12 text-primary-foreground" />
+                <div className="w-full aspect-square bg-gradient-ocean rounded-xl flex items-center justify-center mb-4 hover:scale-105 transition-transform overflow-hidden">
+                  <img 
+                    src={activity.image} 
+                    alt={activity.title}
+                    className="w-full h-full object-contain p-8"
+                  />
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">{activity.title}</h3>
@@ -75,8 +89,12 @@ export function AboutSection() {
               </p>
             </div>
             <div className="relative">
-              <div className="w-full h-64 bg-gradient-ocean rounded-xl flex items-center justify-center">
-                <Waves className="w-16 h-16 text-primary-foreground animate-wave" />
+              <div className="w-full h-64 bg-gradient-ocean rounded-xl flex items-center justify-center overflow-hidden">
+                <img 
+                  src={varHistorie} 
+                  alt="Vår historie"
+                  className="w-full h-full object-contain p-8"
+                />
               </div>
             </div>
           </div>
