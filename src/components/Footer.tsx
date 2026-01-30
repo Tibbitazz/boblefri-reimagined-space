@@ -1,5 +1,4 @@
 import { Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import logoWhite from "@/assets/logo-white.svg";
 
 export function Footer() {
@@ -70,9 +69,6 @@ export function Footer() {
             <p className="text-primary-foreground/80 flex items-center justify-center gap-2">
               Laget med <Heart className="w-4 h-4 text-accent" /> for havet og fridykking
             </p>
-            <Button asChild variant="ghost" size="sm" className="text-primary-foreground/60 hover:text-primary-foreground/80">
-              <a href="/auth">Admin</a>
-            </Button>
             <p className="text-primary-foreground/60">
               © {new Date().getFullYear()} Sola Fridykkeklubb. Alle rettigheter forbeholdt.
             </p>
