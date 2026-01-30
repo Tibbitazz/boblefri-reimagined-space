@@ -19,8 +19,7 @@ const Dokumentarkiv = () => {
                 <Waves className="w-8 h-8 text-accent" />
               </div>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-                Her finner du alle klubbens offisielle dokumenter, møtereferater, 
-                retningslinjer og annet viktig informasjon.
+                Her finner du referater fra årsmøter og styremøter og annen informasjon om klubbens drift.
               </p>
             </div>
 
@@ -62,23 +61,6 @@ const Dokumentarkiv = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <div className="mt-8 text-center">
-              <Card className="bg-accent/10 border-accent">
-                <CardContent className="pt-6">
-                  <h3 className="text-lg font-semibold text-primary mb-3">
-                    Hva finner du i arkivet?
-                  </h3>
-                  <ul className="text-left space-y-2 text-foreground/80 max-w-md mx-auto">
-                    <li>• Klubbens vedtekter og retningslinjer</li>
-                    <li>• Møtereferater fra styremøter og årsmøter</li>
-                    <li>• Treningsmanualer og sikkerhetsprosedyrer</li>
-                    <li>• Skjemaer for medlemskap og aktiviteter</li>
-                    <li>• Historiske dokumenter og bilder</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </section>
       </div>

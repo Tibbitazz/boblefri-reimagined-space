@@ -36,7 +36,7 @@ export function Hero() {
           </div>
           <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl text-primary-foreground/80 mb-12 leading-relaxed">
-            Opplev det stille havet. Utforsk dybden. Bli med oss på reisen under overflaten.
+            Bli med oss under overflaten.
           </p>
           
           <div className="flex justify-center">

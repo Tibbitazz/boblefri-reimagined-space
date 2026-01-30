@@ -1,132 +1,108 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Heart, Gift, Check } from "lucide-react";
-
-const membershipTypes = [
-  {
-    name: "Voksne",
-    price: "300",
-    icon: Users,
-    description: "For personer over 18 år"
-  },
-  {
-    name: "Barn/Unge",
-    price: "150",
-    icon: Heart,
-    description: "For barn og ungdom under 18 år"
-  },
-  {
-    name: "Familie",
-    price: "600",
-    icon: Gift,
-    description: "Familiemedlemskap for hele familien"
-  }
-];
-
-const membershipBenefits = [
-  "Åpen klubb for alle, både barn og voksne",
-  "Inkluderende miljø basert på aktiviteter som fremmer gode opplevelser",
-  "Mindre fokus på prestasjoner, mer på fellesskap",
-  "Langture og turer i lokalmiljøet",
-  "Arrangementer som foredrag, åpen dag, bassengtrening og kurs",
-  "Utlån av utstyr til medlemspriser",
-  "15% rabatt på alt i butikken hos Sola Sport og Fritid (10% på fridykkeutstyr)",
-  "50% rabatt på båtførerprøven",
-  "Automatisk medlemskap i Norges Dykkeforbund og Norges Idrettsforbund",
-  "Gratis barneidrettsforsikring gjennom NIF",
-  "Idrettsbil fra Hertz til medlemspriser",
-  "Idrettspriser hos SAS og Nordic Choice"
-];
+import { ExternalLink } from "lucide-react";
 
 export function MembershipSection() {
   return (
     <section id="membership" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Bli medlem
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Sola Fridykkeklubb er medlem av Norges idrettsforbund (NIF) og Norges Dykkeforbund.
-          </p>
-          <p className="text-lg text-muted-foreground mt-4">
-            Du kan enkelt bli medlem i klubben via vår innmeldingsside hos NIF.
-          </p>
+          </h1>
         </div>
 
-        {/* Membership Call to Action */}
-        <div className="mb-16">
-          <Card 
-            className="relative group transition-all duration-300 hover:shadow-float hover:-translate-y-2 border-primary/50 cursor-pointer max-w-2xl mx-auto"
+        {/* Intro Text */}
+        <div className="prose prose-lg max-w-none mb-12">
+          <div className="space-y-6 text-foreground/80 leading-relaxed">
+            <p>
+              Som medlem i Sola Fridykkeklubb blir du en del av et inkluderende miljø som legger vekt på gode opplevelser.
+            </p>
+            
+            <p>
+              Voksne medlemmer leier fridykkerutstyr til rabattert pris, barn låner gratis. Medlemmer får også rabatt på utstyr til fridykking og undervannsjakt hos enkelte forhandlere.
+            </p>
+            
+            <p>
+              Ukentlige bassengtreninger er inkludert i medlemsprisen.
+            </p>
+            
+            <p>
+              Som medlem i klubben blir du automatisk medlem i Norges Dykkeforbund, som også innebærer en rekke{" "}
+              <a 
+                href="https://ndf.no/klubb/klubbsupport/medlemsfordeler/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 underline inline-flex items-center gap-1"
+              >
+                medlemsfordeler
+                <ExternalLink className="w-4 h-4" />
+              </a>.
+            </p>
+          </div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Individual Membership */}
+          <Card className="shadow-depth">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">
+                Priser for individuelt medlemskap
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="text-foreground">Voksen</span>
+                  <span className="font-semibold text-foreground">750 kr</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-foreground">Barn</span>
+                  <span className="font-semibold text-foreground">300 kr</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Family Membership */}
+          <Card className="shadow-depth">
+            <CardHeader>
+              <CardTitle className="text-xl text-foreground">
+                Priser for familiemedlemskap
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="text-foreground">Familie – én voksen og inntil tre barn</span>
+                  <span className="font-semibold text-foreground">750 kr</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-border">
+                  <span className="text-foreground">Ekstra voksen</span>
+                  <span className="font-semibold text-foreground">300 kr</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-foreground">Ekstra barn</span>
+                  <span className="font-semibold text-foreground">300 kr</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <Button 
+            variant="ocean"
+            size="lg" 
+            className="gap-2"
             onClick={() => window.open('https://www.nif.no', '_blank')}
           >
-            <CardHeader className="text-center pb-4">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-primary" />
-              </div>
-              <CardTitle className="text-3xl font-bold text-foreground mb-4">Bli medlem i dag</CardTitle>
-              <p className="text-muted-foreground text-lg">
-                Medlemskap inkluderer alle aktiviteter og fordeler
-              </p>
-              <div className="mt-6 space-y-2">
-                <p className="text-foreground"><span className="font-semibold">Voksne:</span> 300 kr</p>
-                <p className="text-foreground"><span className="font-semibold">Barn/Unge (under 18):</span> 150 kr</p>
-                <p className="text-foreground"><span className="font-semibold">Familie:</span> 600 kr</p>
-              </div>
-            </CardHeader>
-
-            <CardContent className="pt-4">
-              <Button 
-                variant="wave"
-                size="lg" 
-                className="w-full"
-              >
-                Meld deg inn via NIF
-              </Button>
-            </CardContent>
-          </Card>
+            Meld deg inn via NIF
+            <ExternalLink className="w-5 h-5" />
+          </Button>
         </div>
-
-        {/* Benefits Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-            Fordeler ved medlemskapet
-          </h3>
-          <Card className="bg-card border-primary/20">
-            <CardContent className="p-8">
-              <p className="text-foreground mb-6 text-lg leading-relaxed">
-                Vi er en klubb som er åpen for alle, både barn og voksne. Vi har et inkluderende miljø basert på aktiviteter som fremmer gode opplevelser og har mindre fokus på prestasjoner. Vi arrangerer langture og turer i lokalmiljøet, har arrangementer som foredrag, åpen dag, bassengtrening og kurs.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-4">Medlemsfordeler</h4>
-                  <ul className="space-y-3">
-                    {membershipBenefits.slice(0, 6).map((benefit, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-xl font-semibold text-foreground mb-4">Automatiske fordeler</h4>
-                  <ul className="space-y-3">
-                    {membershipBenefits.slice(6).map((benefit, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
       </div>
     </section>
   );
