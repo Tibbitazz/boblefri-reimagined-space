@@ -46,9 +46,9 @@ export function ContactSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Contact Information Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {contactInfo.map((info, index) => (
+          {/* Contact Information Grid - first 3 items */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {contactInfo.slice(0, 3).map((info, index) => (
               <Card 
                 key={info.title}
                 className="group hover:shadow-float transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
@@ -85,6 +85,36 @@ export function ContactSection() {
                       </div>
                     </div>
                   )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Social Media Grid - centered 2 items */}
+          <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
+            {contactInfo.slice(3).map((info, index) => (
+              <Card 
+                key={info.title}
+                className="group hover:shadow-float transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <a 
+                    href={info.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center text-center gap-4 hover:text-primary transition-colors"
+                  >
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
+                      {info.details.map((detail, i) => (
+                        <p key={i} className="text-muted-foreground text-sm">{detail}</p>
+                      ))}
+                    </div>
+                  </a>
                 </CardContent>
               </Card>
             ))}
