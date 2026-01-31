@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import logoWhite from "@/assets/logo-white.svg";
 
 export function Footer() {
@@ -22,29 +23,29 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Hurtiglenker</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/om-oss" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Om oss
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#membership" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/bli-medlem" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Bli medlem
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#equipment" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/laneutstyr" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Låneutstyr
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/barnas-havfest" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/barnas-havfest" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Barnas Havfest
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/kontakt" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Kontakt
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

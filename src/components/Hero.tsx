@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import logoWhite from "@/assets/logo-white.svg";
@@ -35,9 +36,9 @@ export function Hero() {
               variant="ocean" 
               size="lg" 
               className="animate-scale-in"
-              onClick={() => window.location.href = '/bli-medlem'}
+              asChild
             >
-              Bli medlem
+              <Link to="/bli-medlem">Bli medlem</Link>
             </Button>
           </div>
         </div>
