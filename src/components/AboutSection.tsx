@@ -1,4 +1,4 @@
-import varHistorie from "@/assets/var-historie.png";
+import omOss from "@/assets/om-oss.png";
 
 export function AboutSection() {
   return (
@@ -8,8 +8,8 @@ export function AboutSection() {
         <div className="mb-12">
           <div className="w-full aspect-video bg-gradient-ocean rounded-2xl overflow-hidden shadow-depth">
             <img 
-              src={varHistorie} 
-              alt="Fridykkere under vann"
+              src={omOss} 
+              alt="Sola Fridykkeklubb gruppebilder"
               className="w-full h-full object-cover"
             />
           </div>
