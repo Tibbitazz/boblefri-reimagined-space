@@ -6,11 +6,11 @@ export function AboutSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Image */}
         <div className="mb-12">
-          <div className="w-full aspect-video bg-gradient-ocean rounded-2xl overflow-hidden shadow-depth">
+          <div className="w-full rounded-2xl overflow-hidden shadow-depth">
             <img 
               src={omOss} 
               alt="Sola Fridykkeklubb gruppebilder"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>
