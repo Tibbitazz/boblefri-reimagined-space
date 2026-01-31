@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import omOss from "@/assets/om-oss.png";
 
 export function AboutSection() {
@@ -52,12 +53,12 @@ export function AboutSection() {
             
             <p>
               Mer informasjon om vår drift finner du i vårt{" "}
-              <a 
-                href="/dokumentarkiv" 
+              <Link 
+                to="/dokumentarkiv" 
                 className="text-primary hover:text-primary/80 underline"
               >
                 åpne dokumentarkiv
-              </a>.
+              </Link>.
             </p>
             
             <p className="text-sm text-muted-foreground italic">
