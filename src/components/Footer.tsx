@@ -56,10 +56,6 @@ export function Footer() {
               <p>Sola Badeplass, 4050 Sola</p>
               <p>+47 123 45 678</p>
               <p>post@solafridykkeklubb.no</p>
-              <p className="pt-2">
-                <strong>Treninger:</strong><br />
-                Tirsdag og torsdag 19:00
-              </p>
             </div>
           </div>
         </div>

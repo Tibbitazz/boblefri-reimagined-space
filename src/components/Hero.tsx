@@ -1,28 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Waves, Fish } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import logoWhite from "@/assets/logo-white.svg";
+import heroBg from "@/assets/hero-bg.png";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-deep"></div>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      ></div>
+      <div className="absolute inset-0 bg-primary/40"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 animate-float">
-          <Waves className="w-8 h-8 text-primary/30" />
-        </div>
-        <div className="absolute top-40 right-20 animate-wave">
-          <Fish className="w-6 h-6 text-accent/40" />
-        </div>
-        <div className="absolute bottom-32 left-1/4 animate-float" style={{ animationDelay: '2s' }}>
-          <div className="w-3 h-3 bg-primary/20 rounded-full"></div>
-        </div>
-        <div className="absolute bottom-40 right-1/3 animate-wave" style={{ animationDelay: '4s' }}>
-          <div className="w-2 h-2 bg-accent/30 rounded-full"></div>
-        </div>
-      </div>
+      {/* Animated background elements - removed */}
       
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
