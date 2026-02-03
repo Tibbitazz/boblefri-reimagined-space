@@ -9,13 +9,9 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div className="col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img src={logoWhite} alt="Sola Fridykkeklubb" className="h-12 w-auto" />
+          <div className="flex items-center gap-3">
+              <img src={logoWhite} alt="Sola Fridykkeklubb" className="h-20 w-auto" />
             </div>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Norges fremste fridykkeklubb. Vi tilbyr trygg og profesjonell 
-              opplæring i fridykking for alle nivåer.
-            </p>
           </div>
 
           {/* Quick Links */}

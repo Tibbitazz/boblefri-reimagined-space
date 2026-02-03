@@ -32,9 +32,7 @@ const Dokumentarkiv = () => {
                       Tilgang til dokumenter
                     </h2>
                     <p className="text-foreground/70 mb-6 max-w-xl">
-                      Alle klubbens dokumenter er lagret i vårt SharePoint-arkiv. 
-                      Som medlem har du tilgang til møtereferater, vedtekter, 
-                      treningsmanualer, og mye mer.
+                      Dokumentarkivet ligger på SharePoint og er åpent for alle.
                     </p>
                   </div>
 
@@ -50,9 +48,7 @@ const Dokumentarkiv = () => {
 
                   <div className="pt-6 border-t border-border w-full">
                     <p className="text-sm text-foreground/60">
-                      Du vil bli videresendt til SharePoint hvor dokumentene er lagret.
-                      <br />
-                      Kontakt styret hvis du har problemer med å få tilgang.
+                      Dersom du har problemer med å åpne dokumentarkivet, så kan det hjelpe å åpne lenken i «inkognito» eller «privat» modus i nettleseren.
                     </p>
                   </div>
                 </div>

@@ -61,9 +61,6 @@ export function AboutSection() {
               </Link>.
             </p>
             
-            <p className="text-sm text-muted-foreground italic">
-              (Dersom du har problemer med å åpne dokumentarkivet, forsøk å åpne lenken i «inkognito» eller «privat» modus i nettleseren.)
-            </p>
           </div>
         </div>
       </div>
