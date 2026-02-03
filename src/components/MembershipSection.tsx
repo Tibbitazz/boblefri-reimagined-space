@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import bliMedlemImg from "@/assets/bli-medlem.jpg";
 
 export function MembershipSection() {
   return (
@@ -10,6 +11,17 @@ export function MembershipSection() {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Bli medlem
           </h1>
+        </div>
+
+        {/* Hero Image */}
+        <div className="mb-12">
+          <div className="w-full rounded-2xl overflow-hidden shadow-depth">
+            <img 
+              src={bliMedlemImg} 
+              alt="Fridykker i norsk natur"
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
 
         {/* Intro Text */}

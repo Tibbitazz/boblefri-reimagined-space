@@ -6,7 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
-import BarnasHavfest from "./pages/BarnasHavfest";
+// import BarnasHavfest from "./pages/BarnasHavfest"; // Hidden per request
 import OmOss from "./pages/OmOss";
 import BliMedlem from "./pages/BliMedlem";
 import Låneutstyr from "./pages/Låneutstyr";
@@ -26,7 +26,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/barnas-havfest" element={<BarnasHavfest />} />
+          {/* <Route path="/barnas-havfest" element={<BarnasHavfest />} /> */} {/* Hidden per request */}
           <Route path="/om-oss" element={<OmOss />} />
           <Route path="/bli-medlem" element={<BliMedlem />} />
           <Route path="/laneutstyr" element={<Låneutstyr />} />

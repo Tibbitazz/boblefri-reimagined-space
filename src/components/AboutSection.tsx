@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import omOss from "@/assets/om-oss.png";
+import omOss from "@/assets/om-oss.jpg";
 
 export function AboutSection() {
   return (
