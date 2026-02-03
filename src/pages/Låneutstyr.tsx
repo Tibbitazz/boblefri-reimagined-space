@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Mail, Waves } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 
 const Låneutstyr = () => {
   return (
@@ -15,9 +15,6 @@ const Låneutstyr = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                 Leie av fridykkerutstyr
               </h1>
-              <div className="flex justify-center mb-6">
-                <Waves className="w-8 h-8 text-accent" />
-              </div>
             </div>
 
             {/* Intro Text */}

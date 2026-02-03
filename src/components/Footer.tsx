@@ -67,7 +67,7 @@ export function Footer() {
               Laget med <Heart className="w-4 h-4 text-accent" /> for havet og fridykking
             </p>
             <p className="text-primary-foreground/60">
-              © {new Date().getFullYear()} Sola Fridykkeklubb. Alle rettigheter forbeholdt.
+              © {new Date().getFullYear()} Sola Fridykkeklubb · Org.nr. 914897084. Alle rettigheter forbeholdt.
             </p>
           </div>
         </div>
