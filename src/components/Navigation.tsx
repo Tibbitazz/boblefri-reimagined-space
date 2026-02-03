@@ -9,7 +9,7 @@ const navigationItems = [
   { name: "Om oss", href: "/om-oss" },
   { name: "Bli medlem", href: "/bli-medlem" },
   { name: "Låneutstyr", href: "/laneutstyr" },
-  { name: "Barnas Havfest", href: "/barnas-havfest" },
+  // { name: "Barnas Havfest", href: "/barnas-havfest" }, // Hidden per request
   { name: "Dokumentarkiv", href: "/dokumentarkiv" },
   { name: "Kontakt", href: "/kontakt" },
 ];
