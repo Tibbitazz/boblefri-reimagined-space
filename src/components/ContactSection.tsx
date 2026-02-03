@@ -21,13 +21,13 @@ const contactInfo = [
   {
     icon: Facebook,
     title: "Facebook",
-    details: ["facebook.com/solafridykkeklubb"],
+    details: [],
     link: "https://www.facebook.com/solafridykkeklubb"
   },
   {
     icon: Instagram,
     title: "Instagram",
-    details: ["@sola_fridykkeklubb"],
+    details: [],
     link: "https://www.instagram.com/sola_fridykkeklubb"
   }
 ];
