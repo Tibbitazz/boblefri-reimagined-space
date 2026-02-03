@@ -38,8 +38,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/barnas-havfest" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Barnas Havfest
+                <Link to="/dokumentarkiv" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Dokumentarkiv
                 </Link>
               </li>
               <li>
@@ -54,9 +54,8 @@ export function Footer() {
           <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-2 text-primary-foreground/80">
-              <p>Sola Badeplass, 4050 Sola</p>
-              <p>+47 123 45 678</p>
-              <p>post@solafridykkeklubb.no</p>
+              <p>Erlingvegen 10, 4055 Sola</p>
+              <p>kontakt@solafridykkeklubb.no</p>
             </div>
           </div>
         </div>
