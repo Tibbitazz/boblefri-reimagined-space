@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, FileText, Waves } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 
 const Dokumentarkiv = () => {
   return (
@@ -15,9 +15,6 @@ const Dokumentarkiv = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                 Dokumentarkiv
               </h1>
-              <div className="flex justify-center mb-6">
-                <Waves className="w-8 h-8 text-accent" />
-              </div>
               <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 Her finner du referater fra årsmøter og styremøter og annen informasjon om klubbens drift.
               </p>
