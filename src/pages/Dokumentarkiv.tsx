@@ -40,7 +40,7 @@ const Dokumentarkiv = () => {
                     variant="ocean" 
                     size="lg"
                     className="gap-2"
-                    onClick={() => window.open('https://solafridykkeklubb.sharepoint.com/Delte%20dokumenter/Forms/AllItems.aspx?id=%2FDelte%20dokumenter%2FOffentlig%20deling&p=true&ga=1', '_blank')}
+                    onClick={() => window.open('https://solafridykkeklubb.sharepoint.com/:f:/g/IgBClXDkYDKYRKw37DQ_TTRdAWEzsRR5iYnq9Mcs5GfX0N0', '_blank')}
                   >
                     <ExternalLink className="w-5 h-5" />
                     Åpne dokumentarkiv
