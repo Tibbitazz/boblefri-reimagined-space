@@ -55,7 +55,7 @@ export function MembershipSection() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-md mx-auto mb-12">
           {/* Individual Membership */}
           <Card className="shadow-depth">
             <CardHeader>
@@ -67,36 +67,11 @@ export function MembershipSection() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-border">
                   <span className="text-foreground">Voksen</span>
-                  <span className="font-semibold text-foreground">750 kr</span>
+                  <span className="font-semibold text-foreground">350 kr</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span className="text-foreground">Barn</span>
-                  <span className="font-semibold text-foreground">300 kr</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Family Membership */}
-          <Card className="shadow-depth">
-            <CardHeader>
-              <CardTitle className="text-xl text-foreground">
-                Priser for familiemedlemskap
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-foreground">Familie – én voksen og inntil tre barn</span>
-                  <span className="font-semibold text-foreground">750 kr</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-foreground">Ekstra voksen</span>
-                  <span className="font-semibold text-foreground">300 kr</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-foreground">Ekstra barn</span>
-                  <span className="font-semibold text-foreground">300 kr</span>
+                  <span className="font-semibold text-foreground">70 kr</span>
                 </div>
               </div>
             </CardContent>
