@@ -103,6 +103,25 @@ export function MembershipSection() {
           <p className="text-foreground/70 text-sm max-w-lg mx-auto">
             Hvis du allerede har konto i "Min Idrett", kan du trykke på lenken over. Hvis du ikke har konto, kan du opprette en via knappen for ny bruker.
           </p>
+
+          {/* Step-by-step guide */}
+          <div className="mt-8 max-w-md mx-auto">
+            <p className="font-semibold text-foreground mb-4">Når du har logget inn, gjør du følgende:</p>
+            <ol className="space-y-3 text-left">
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</span>
+                <span className="text-foreground/80 pt-0.5">Gå til <strong className="text-foreground">"Medlemskap"</strong> i menyen</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</span>
+                <span className="text-foreground/80 pt-0.5">Klikk på <strong className="text-foreground">"Nytt medlemskap"</strong></span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</span>
+                <span className="text-foreground/80 pt-0.5">Søk etter <strong className="text-foreground">"Sola Fridykkeklubb"</strong> og velg klubben</span>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
