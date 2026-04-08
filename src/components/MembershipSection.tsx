@@ -78,17 +78,31 @@ export function MembershipSection() {
           </Card>
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center">
-          <Button 
-            variant="ocean"
-            size="lg" 
-            className="gap-2"
-            onClick={() => window.open('https://www.nif.no', '_blank')}
-          >
-            Meld deg inn via NIF
-            <ExternalLink className="w-5 h-5" />
-          </Button>
+        {/* CTA Buttons */}
+        <div className="text-center space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="ocean"
+              size="lg" 
+              className="gap-2"
+              onClick={() => window.open('https://www.minidrett.no/', '_blank')}
+            >
+              Har du allerede en konto i "Min Idrett"?
+              <ExternalLink className="w-5 h-5" />
+            </Button>
+            <Button 
+              variant="wave"
+              size="lg" 
+              className="gap-2"
+              onClick={() => window.open('https://www.minidrett.no/ny-bruker', '_blank')}
+            >
+              Opprett ny konto i "Min Idrett"
+              <ExternalLink className="w-5 h-5" />
+            </Button>
+          </div>
+          <p className="text-foreground/70 text-sm max-w-lg mx-auto">
+            Hvis du allerede har konto i "Min Idrett", kan du trykke på lenken over. Hvis du ikke har konto, kan du opprette en via knappen for ny bruker.
+          </p>
         </div>
       </div>
     </section>
