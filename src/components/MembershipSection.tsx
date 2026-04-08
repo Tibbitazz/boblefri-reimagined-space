@@ -105,9 +105,9 @@ export function MembershipSection() {
           </p>
 
           {/* Step-by-step guide */}
-          <div className="mt-8 max-w-md mx-auto">
+          <div className="mt-8 max-w-md mx-auto text-center">
             <p className="font-semibold text-foreground mb-4">Når du har logget inn, gjør du følgende:</p>
-            <ol className="space-y-3 text-left">
+            <ol className="space-y-3 inline-block text-left">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</span>
                 <span className="text-foreground/80 pt-0.5">Gå til <strong className="text-foreground">"Medlemskap"</strong> i menyen</span>
