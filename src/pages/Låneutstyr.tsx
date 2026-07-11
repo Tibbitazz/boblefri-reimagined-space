@@ -41,7 +41,7 @@ const Låneutstyr = () => {
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-border">
-                        <th className="text-left py-3 px-4 text-foreground font-semibold"></th>
+                        <th className="text-left py-3 px-4 text-foreground font-semibold">1 uke</th>
                         <th className="text-center py-3 px-4 text-foreground font-semibold">Medlem</th>
                         <th className="text-center py-3 px-4 text-foreground font-semibold">Ikke medlem</th>
                       </tr>
@@ -83,7 +83,7 @@ const Låneutstyr = () => {
                     <tbody>
                       <tr className="border-b border-border">
                         <td className="py-4 px-4 text-foreground">Voksen</td>
-                        <td className="py-4 px-4 text-center text-foreground font-medium">1000 kr</td>
+                        <td className="py-4 px-4 text-center text-foreground font-medium">950 kr</td>
                         <td className="py-4 px-4 text-center text-foreground font-medium">2200 kr</td>
                       </tr>
                       <tr>
