@@ -67,7 +67,7 @@ const Låneutstyr = () => {
             <Card className="shadow-depth mb-12">
               <CardHeader>
                 <CardTitle className="text-xl text-foreground text-center">
-                  Langtidsutleie
+                  Full utstyrspakke – Langtidsutleie
                 </CardTitle>
               </CardHeader>
               <CardContent>
