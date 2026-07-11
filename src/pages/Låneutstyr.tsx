@@ -63,6 +63,43 @@ const Låneutstyr = () => {
               </CardContent>
             </Card>
 
+            {/* Long-term Rental */}
+            <Card className="shadow-depth mb-12">
+              <CardHeader>
+                <CardTitle className="text-xl text-foreground text-center">
+                  Langtidsutleie
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/80 text-center mb-6">
+                  Utlevering/innlevering dato – hver onsdag mellom 1800-1900 ved klubbens lokalet med mindre noe annet er avtalt.
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-border">
+                        <th className="text-left py-3 px-4 text-foreground font-semibold">4 uker</th>
+                        <th className="text-center py-3 px-4 text-foreground font-semibold">Medlem</th>
+                        <th className="text-center py-3 px-4 text-foreground font-semibold">Ikke medlem</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-border">
+                        <td className="py-4 px-4 text-foreground">Voksen</td>
+                        <td className="py-4 px-4 text-center text-foreground font-medium">1000 kr</td>
+                        <td className="py-4 px-4 text-center text-foreground font-medium">2200 kr</td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-4 text-foreground">Barn</td>
+                        <td className="py-4 px-4 text-center text-foreground font-medium">gratis</td>
+                        <td className="py-4 px-4 text-center text-foreground font-medium">700 kr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Booking Form */}
             <Card className="shadow-depth mb-8">
               <CardContent className="pt-6">
