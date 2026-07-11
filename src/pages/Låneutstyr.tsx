@@ -87,7 +87,7 @@ const Låneutstyr = () => {
                         <td className="py-4 px-4 text-center text-foreground font-medium">2200 kr</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-4 text-foreground">Barn</td>
+                        <td className="py-4 px-4 text-foreground">Barn under 15 år</td>
                         <td className="py-4 px-4 text-center text-foreground font-medium">gratis</td>
                         <td className="py-4 px-4 text-center text-foreground font-medium">700 kr</td>
                       </tr>
