@@ -71,9 +71,6 @@ const Låneutstyr = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/80 text-center mb-6">
-                  Utlevering/innlevering dato – hver onsdag mellom 1800-1900 ved klubbens lokalet med mindre noe annet er avtalt.
-                </p>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -124,6 +121,9 @@ const Låneutstyr = () => {
             <Card className="bg-accent/10 border-accent">
               <CardContent className="pt-6">
                 <div className="space-y-4 text-foreground/80">
+                  <p>
+                    Utlevering og innlevering skjer hver onsdag mellom kl. 18:00 og 19:00 ved klubbens lokale, med mindre annet er avtalt.
+                  </p>
                   <p>
                     Utlevering skjer til avtalte tider fra vårt lokale i Erlingveien 10 på Sola.
                   </p>
