@@ -26,41 +26,45 @@ export function AboutSection() {
             <p>
               Sola Fridykkeklubb ble etablert i 2015 med mål om å skape et inkluderende fridykkermiljø i regionen.
             </p>
-            
+
             <p>
-              Klubben er åpen for alle, både barn og voksne. Vi ønsker å dele gleden ved vannet – uansett ferdighetsnivå – og gi medlemmene våre unike opplevelser under overflaten.
+              Klubben er åpen for alle, både barn og voksne. Vi ønsker å dele gleden ved livet i og under vann, uavhengig av erfaring og ferdighetsnivå, og gi medlemmene våre unike opplevelser under overflaten.
             </p>
-            
+
             <p>
-              Vi har en rekke aktiviteter innen fridykking, inkludert undervannsjakt, ryddeaksjoner under vann, undervannsfoto. For medlemmer arrangerer vi turer, utflukter, temakvelder og kurs. Vi har også ukentlige bassengtreninger, både for familier og utøvere.
+              Vi tilbyr et bredt spekter av aktiviteter innen fridykking, blant annet dybdeapnea, bassengapnea, undervannsjakt, ryddeaksjoner under vann og undervannsfotografering. For medlemmene arrangerer vi både korte og lengre turer, temakvelder og kurs. I tillegg har vi ukentlige bassengtreninger for familier og utøvere som ønsker å utvikle sine ferdigheter innen bassengapnea.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
-              Respekt for havet
+              Respekt for sikkerhet og havet
             </h2>
-            
+
             <p>
-              Som fridykkere har vi et unikt ansvar for å ta vare på livet under vann. Vi unngår helst å røre koraller og marine dyr, vi etterlater ingenting – bortsett fra boblene våre – og vi tenker bærekraft når vi høster fra havet. Gjennom organiserte ryddeaksjoner bidrar vi til å redusere marin forsøpling.
+              Sikkerhet står alltid i sentrum for våre aktiviteter, og vi promoterer bruk av «buddy-systemet» ved all fridykking.
+            </p>
+
+            <p>
+              Som fridykkere har vi et ansvar for å ta vare på livet under vann. Vi ønsker å ferdes med minst mulig påvirkning på miljøet, etterlate naturen slik vi fant den og tenke bærekraftig når vi høster fra havet. Gjennom organiserte ryddeaksjoner bidrar vi aktivt til å redusere marin forsøpling og ta vare på våre lokale havområder.
             </p>
 
             <h2 className="text-2xl font-bold text-foreground mt-10 mb-4">
               Klubbens drift
             </h2>
-            
+
             <p>
-              Klubben er medlem av Norges Idrettsforbund og Norges Dykkerforbund.
+              Sola Fridykkeklubb er tilsluttet Norges Idrettsforbund og Norges Dykkeforbund, og drives av engasjerte frivillige medlemmer.
             </p>
-            
+
             <p>
-              Mer informasjon om vår drift finner du i vårt{" "}
-              <Link 
-                to="/dokumentarkiv" 
+              Mer informasjon om klubbens drift, vedtekter og øvrige dokumenter finner du i vårt{" "}
+              <Link
+                to="/dokumentarkiv"
                 className="text-primary hover:text-primary/80 underline"
               >
                 åpne dokumentarkiv
               </Link>.
             </p>
-            
+
           </div>
         </div>
       </div>
