@@ -4,11 +4,6 @@ import { MapPin, Mail, Facebook, Instagram } from "lucide-react";
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Postadresse",
-    details: ["c/o Tor Arne Oltedal", "Bjørneveien 26", "4323 Sandnes"]
-  },
-  {
-    icon: MapPin,
     title: "Besøksadresse",
     details: ["Erlingvegen 10, 4055 Sola", "(etter avtale)"]
   },
