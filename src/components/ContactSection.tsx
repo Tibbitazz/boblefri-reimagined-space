@@ -4,11 +4,6 @@ import { MapPin, Mail, Facebook, Instagram } from "lucide-react";
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Postadresse",
-    details: ["c/o Tor Arne Oltedal", "Bjørneveien 26", "4323 Sandnes"]
-  },
-  {
-    icon: MapPin,
     title: "Besøksadresse",
     details: ["Erlingvegen 10, 4055 Sola", "(etter avtale)"]
   },
@@ -48,7 +43,7 @@ export function ContactSection() {
         <div className="max-w-4xl mx-auto">
           {/* Contact Information Grid - first 3 items */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {contactInfo.slice(0, 3).map((info, index) => (
+            {contactInfo.slice(0, 2).map((info, index) => (
               <Card 
                 key={info.title}
                 className="group hover:shadow-float transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
@@ -92,11 +87,11 @@ export function ContactSection() {
 
           {/* Social Media Grid - centered 2 items */}
           <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
-            {contactInfo.slice(3).map((info, index) => (
+            {contactInfo.slice(2).map((info, index) => (
               <Card 
                 key={info.title}
                 className="group hover:shadow-float transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+                style={{ animationDelay: `${(index + 2) * 0.1}s` }}
               >
                 <CardContent className="p-6">
                   <a 
