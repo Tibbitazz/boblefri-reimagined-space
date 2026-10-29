@@ -41,8 +41,8 @@ export function ContactSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Contact Information Grid - first 3 items */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {/* Contact Information Grid - first 2 items, centered */}
+          <div className="grid sm:grid-cols-2 gap-6 mb-6 max-w-2xl mx-auto">
             {contactInfo.slice(0, 2).map((info, index) => (
               <Card 
                 key={info.title}
